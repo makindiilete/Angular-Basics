@@ -1,0 +1,12 @@
+<div>
+  <!--  We render the data sent from child-->
+  <h1>{{ propFromChild }}</h1>
+  <!--  just as we pass prop inside d component tag, we bind d 'name' field to the child component tag using 'nameProp' as d prop name which d child will call to access d value of d property-->
+
+  <!--  Line 9 : - receive event from child-->
+  <!--  Line 10 : - send data to child-->
+  <app-component-interaction
+    (propFromChild)="propFromChild = $event"
+    [nameProp]="name"
+  ></app-component-interaction>
+</div>
